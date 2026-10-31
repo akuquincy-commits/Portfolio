@@ -1,0 +1,293 @@
+.contact__inner {
+  display: grid;
+  gap: var(--space-12);
+}
+
+@media (min-width: 900px) {
+  .contact__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: start;
+  }
+}
+
+.contact__lead {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact__details li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.contact__label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.contact__details a {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact__details a:hover {
+  color: var(--color-accent-hover);
+}
+
+.contact__email-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.contact__copy-btn {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.2rem 0.5rem;
+  transition: all var(--duration) var(--ease);
+}
+
+.contact__copy-btn:hover {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}
+
+.contact__copy-btn:active {
+  transform: scale(0.96);
+}
+
+.contact__details span:not(.contact__label) {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  background: rgba(14, 22, 18, 0.65);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+}
+
+@media (min-width: 768px) {
+  .contact__form {
+    padding: var(--space-8);
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-group label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea,
+.form-select {
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  padding: 0.85rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text);
+  transition: all var(--duration) var(--ease);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.form-select {
+  width: 100%;
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2.5rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(26, 95, 74, 0.12);
+}
+
+.form-group--reveal {
+  animation: fadeInDown 250ms var(--ease);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Channel Toggle */
+.contact__channel-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-1);
+}
+
+.channel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.85rem 1rem;
+  background-color: var(--color-bg);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: all var(--duration) var(--ease);
+  position: relative;
+}
+
+.channel-btn:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text);
+}
+
+.channel-btn--active {
+  border-color: var(--color-accent);
+  background-color: var(--color-bg-elevated);
+  color: var(--color-accent);
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(26, 95, 74, 0.12),
+    0 1px 3px rgba(26, 95, 74, 0.08);
+}
+
+.channel-btn__icon {
+  flex-shrink: 0;
+}
+
+
+.contact__submit--3d {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  box-shadow: 0 4px 12px rgba(26, 95, 74, 0.25);
+  transition: all var(--duration) var(--ease);
+}
+
+.contact__submit--3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(26, 95, 74, 0.35);
+}
+
+.contact__submit--3d:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+  border-color: #b33a3a;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-error {
+  font-size: var(--font-size-xs);
+  color: #b33a3a;
+}
+
+.contact__success {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-accent);
+  padding: var(--space-4);
+  background-color: rgba(26, 95, 74, 0.08);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(26, 95, 74, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contact__success-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-1);
+}
+
+.contact__success-email {
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+.contact__copy-btn-sm {
+  font-size: var(--font-size-xs);
+  padding: 0.4rem 0.8rem;
+}
+
+.contact__submit {
+  align-self: flex-start;
+}
+
+.contact__note {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-normal);
+}

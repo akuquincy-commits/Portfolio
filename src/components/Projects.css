@@ -1,0 +1,208 @@
+.projects__grid {
+  display: grid;
+  gap: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .projects__grid {
+    gap: var(--space-16);
+  }
+}
+
+.project-card {
+  display: grid;
+  gap: var(--space-6);
+  background: rgba(14, 22, 18, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  transition: all var(--duration) var(--ease);
+}
+
+.project-card:hover {
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.35);
+  transform: translateY(-4px);
+}
+
+@media (min-width: 900px) {
+  .project-card {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 0;
+  }
+}
+
+.project-card__media {
+  aspect-ratio: 16 / 10;
+  background-color: var(--color-bg-subtle);
+  overflow: hidden;
+  display: flex;
+}
+
+@media (min-width: 900px) {
+  .project-card__media {
+    aspect-ratio: auto;
+    min-height: 280px;
+  }
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card__mockup {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    145deg,
+    rgba(20, 30, 25, 0.7) 0%,
+    rgba(12, 18, 15, 0.9) 100%
+  );
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-card__mockup-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.625rem 1rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-card__mockup-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d8d3c8;
+}
+
+.project-card__mockup-dot:nth-child(1) {
+  background-color: #e6a59b;
+}
+
+.project-card__mockup-dot:nth-child(2) {
+  background-color: #f1cf89;
+}
+
+.project-card__mockup-dot:nth-child(3) {
+  background-color: #a4ceb5;
+}
+
+.project-card__mockup-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.project-card__mockup-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card__mockup-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.project-card__mockup-badge {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-accent);
+  background-color: rgba(16, 185, 129, 0.12);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.project-card__body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (min-width: 900px) {
+  .project-card__body {
+    padding: var(--space-8);
+    justify-content: center;
+  }
+}
+
+.project-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-snug);
+}
+
+.project-card__description {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.project-card__tech li {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  padding: 0.25rem 0.6rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.project-card__link {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--duration) var(--ease);
+}
+
+.project-card__link:hover {
+  color: var(--color-accent-hover);
+}
+
+.project-card__link--disabled {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  cursor: default;
+}

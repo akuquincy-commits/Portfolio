@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>404 - Page Not Found</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-bg: #f7f5f0;
+        --color-bg-elevated: #ffffff;
+        --color-text: #1c1c1c;
+        --color-text-secondary: #4a4a4a;
+        --color-accent: #1a5f4a;
+        --color-accent-hover: #144a3a;
+        --color-border: #e0dbd2;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem;
+        text-align: center;
+      }
+      .card {
+        max-width: 480px;
+        background-color: var(--color-bg-elevated);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 3rem 2rem;
+        box-shadow: 0 10px 30px rgba(28, 28, 28, 0.06);
+      }
+      .code {
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin-bottom: 0.75rem;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+      }
+      p {
+        color: var(--color-text-secondary);
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-accent);
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0.875rem 1.75rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border-radius: 4px;
+        transition: background-color 200ms ease, transform 200ms ease;
+      }
+      a:hover {
+        background-color: var(--color-accent-hover);
+        transform: translateY(-1px);
+      }
+      a:active {
+        transform: scale(0.98);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <p class="code">404 Error</p>
+      <h1>Page not found</h1>
+      <p>
+        The page you are looking for doesn’t exist or might have been relocated.
+      </p>
+      <a href="/">Return to Home</a>
+    </main>
+  </body>
+</html>
+

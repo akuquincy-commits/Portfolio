@@ -1,0 +1,198 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(var(--header-height) + var(--space-8));
+  padding-bottom: var(--space-20);
+}
+
+/* Background image with dark fade to the left, brightening to the right */
+.hero__bg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero__bg-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  background-image: url("/images/profile.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: contrast(1.06) brightness(1.02);
+  animation: heroBreathe 14s ease-in-out infinite alternate;
+}
+
+@keyframes heroBreathe {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03) translate(-6px, -3px);
+  }
+}
+
+.hero__bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(
+      90deg,
+      #080c0a 0%,
+      #080c0a 38%,
+      rgba(8, 12, 10, 0.95) 48%,
+      rgba(8, 12, 10, 0.6) 62%,
+      rgba(8, 12, 10, 0.15) 78%,
+      rgba(8, 12, 10, 0) 92%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 12, 10, 0.8) 0%,
+      transparent 15%,
+      transparent 80%,
+      #080c0a 100%
+    );
+}
+
+@media (max-width: 900px) {
+  .hero__bg-image {
+    width: 100%;
+    background-position: center top;
+    opacity: 0.35;
+  }
+
+  .hero__bg-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 12, 10, 0.95) 0%,
+      rgba(8, 12, 10, 0.85) 60%,
+      rgba(8, 12, 10, 0.5) 100%
+    );
+  }
+}
+
+.hero__ambient-glow {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(16, 185, 129, 0.18) 0%,
+    transparent 65%
+  );
+  filter: blur(50px);
+  animation: glowFloat 8s ease-in-out infinite alternate;
+}
+
+@keyframes glowFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(25px, -20px) scale(1.15);
+    opacity: 1;
+  }
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Hero text content - blends with background, no box or border */
+.hero__content {
+  max-width: 650px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 0;
+  animation: heroContentEntrance 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes heroContentEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__headline {
+  font-size: clamp(2.25rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: var(--space-6);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero__supporting {
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 540px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.btn-glow {
+  background-color: var(--color-accent);
+  color: #061109;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.45);
+  transition: all var(--duration) var(--ease);
+}
+
+.btn-glow:hover {
+  background-color: var(--color-accent-hover);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.65);
+  transform: translateY(-2px);
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transition: all var(--duration) var(--ease);
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg-image,
+  .hero__ambient-glow,
+  .hero__glass-card {
+    animation: none !important;
+    transition: none !important;
+  }
+}
