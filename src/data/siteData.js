@@ -35,19 +35,19 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://akuquincy-commits.github.io/NATCO/",
     githubUrl: "https://github.com/akuquincy-commits/NATCO",
-    image: "/images/natco.png", // replace with path when screenshot is available
+    image: "/images/natco.png", 
     imageAlt: "NATCO Construction website preview",
   },
   {
-    id: "build-quote",
-    title: "Build-Quote",
+    id: "resturant",
+    title: "truBite",
     description:
-      "Responsive website designed to help a construction business present services, showcase completed work and build trust with potential clients.",
+      "A modern, appetizing restaurant website showcasing the menu, brand story and dining experience with a clean, mobile-friendly layout that helps guests explore and connect.",
     technologies: ["React", "CSS", "JavaScript"],
-    liveUrl: "https://buildquote-11.netlify.app/",
-    githubUrl: "https://github.com/akuquincy-commits/buildQuote11",
-    image: "/images/build-quote.png",
-    imageAlt: "Build Quote preview",
+    liveUrl: "https://akuquincy-commits.github.io/trubite-restaurant/",
+    githubUrl: "https://github.com/akuquincy-commits/trubite-restaurant",
+    image: "/images/resturant.png",
+    imageAlt: "truBite restaurant website preview",
   },
   {
     id: "expense-tracker",

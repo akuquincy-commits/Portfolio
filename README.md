@@ -1,4 +1,3 @@
-
 # Professional Frontend Developer Portfolio
 
 A polished, modern, responsive personal portfolio built with React and Vite.
@@ -56,7 +55,4 @@ Update the favicon initials in `public/favicon.svg`.
 
 - Project live/GitHub links are placeholders (`#`) until real URLs are supplied.
 - Do not invent employment history, clients or achievements.
-
-# Portfolio
-Personal portfolio showing some projects and contact details
 
