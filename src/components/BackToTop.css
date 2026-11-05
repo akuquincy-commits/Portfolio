@@ -45,3 +45,13 @@
   }
 }
 
+
+
+@media (max-width: 600px) {
+  .back-to-top {
+    bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+    right: var(--space-4);
+    width: 42px;
+    height: 42px;
+  }
+}

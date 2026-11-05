@@ -141,3 +141,16 @@
   font-weight: 500;
   color: var(--color-text);
 }
+
+
+@media (max-width: 600px) {
+  .about__inner {
+    gap: var(--space-8);
+  }
+
+  .about__3d-card {
+    padding: var(--space-4);
+    border-radius: 20px;
+    max-width: 320px;
+  }
+}

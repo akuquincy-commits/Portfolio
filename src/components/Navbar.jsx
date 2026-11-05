@@ -126,6 +126,15 @@ export default function Navbar() {
               );
             })}
           </ul>
+          <div className="navbar__mobile-cta">
+            <a
+              href="#contact"
+              className="soap-bubble-surface soap-bubble-button soap-bubble-button--primary"
+              onClick={handleLinkClick}
+            >
+              <span className="soap-bubble-button-content">Get in Touch</span>
+            </a>
+          </div>
         </nav>
       </div>
     </header>

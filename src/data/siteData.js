@@ -35,7 +35,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://akuquincy-commits.github.io/NATCO/",
     githubUrl: "https://github.com/akuquincy-commits/NATCO",
-    image: "/images/natco.png", 
+    image: "/images/natcopage.png", 
     imageAlt: "NATCO Construction website preview",
   },
   {

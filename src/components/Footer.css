@@ -101,3 +101,15 @@
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
 }
+
+
+@media (max-width: 600px) {
+  .footer {
+    padding-block: var(--space-10) var(--space-6);
+  }
+
+  .footer__inner {
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+  }
+}

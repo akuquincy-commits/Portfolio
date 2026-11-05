@@ -55,3 +55,15 @@
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
 }
+
+
+@media (max-width: 600px) {
+  .process__list {
+    gap: var(--space-4);
+  }
+
+  .process__item {
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+  }
+}

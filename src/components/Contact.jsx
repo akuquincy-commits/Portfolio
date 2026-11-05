@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { personalInfo } from "../data/siteData";
+import Button from "./Button";
 import "./Contact.css";
 
 const SUBJECT_OPTIONS = [
@@ -352,9 +353,11 @@ export default function Contact() {
             )}
           </div>
 
-          <button
+          <Button
             type="submit"
-            className="btn btn-primary contact__submit contact__submit--3d"
+            variant="primary"
+            size="lg"
+            className="contact__submit"
           >
             {form.channel === "whatsapp" ? (
               <>
@@ -390,7 +393,7 @@ export default function Contact() {
                 <span>Send via Email</span>
               </>
             )}
-          </button>
+          </Button>
 
           <p className="contact__note">
             {form.channel === "whatsapp"

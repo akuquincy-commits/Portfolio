@@ -1,4 +1,5 @@
 import { hero } from "../data/siteData";
+import Button from "./Button";
 import "./Hero.css";
 
 export default function Hero() {
@@ -18,12 +19,12 @@ export default function Hero() {
           <p className="hero__supporting">{hero.supporting}</p>
 
           <div className="hero__actions">
-            <a href="#work" className="btn btn-primary btn-glow">
+            <Button as="a" href="#work" variant="primary" size="lg">
               {hero.primaryCta}
-            </a>
-            <a href="#contact" className="btn btn-secondary btn-glass">
+            </Button>
+            <Button as="a" href="#contact" variant="secondary" size="lg">
               {hero.secondaryCta}
-            </a>
+            </Button>
           </div>
         </div>
       </div>

@@ -47,3 +47,15 @@
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
 }
+
+
+@media (max-width: 640px) {
+  .service-card {
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+  }
+
+  .service-card__title {
+    font-size: 1.05rem;
+  }
+}
