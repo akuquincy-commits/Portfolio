@@ -58,8 +58,11 @@ export default function Footer() {
       </div>
 
       <div className="container footer__bottom">
-        <p>
-          © {currentYear} {personalInfo.name}. All rights reserved. 
+        <p className="footer__disclaimer">
+          Disclaimer: Projects showcased on this portfolio are independent concepts and development case studies created for demonstration purposes; they are not currently commissioned by or affiliated with any company.
+        </p>
+        <p className="footer__copyright">
+          © {currentYear} {personalInfo.name}. All rights reserved.
         </p>
       </div>
     </footer>
